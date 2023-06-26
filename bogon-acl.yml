@@ -1,0 +1,135 @@
+acl:
+  acl-sets:
+    acl-set:
+      - name: "BOGON"
+        type: "ACL_IPV4"
+        acl-entries:
+          acl-entry:
+            - sequence-id: 10
+              actions:
+                config:
+                  forward-action: "DROP"
+              ipv4:
+                config:
+                  source-address: "0.0.0.0/8"
+                  destination-address: "ANY"
+            - sequence-id: 20
+              actions:
+                config:
+                  forward-action: "DROP"
+              ipv4:
+                config:
+                  source-address: "224.0.0.0/4"
+                  destination-address: "ANY"
+            - sequence-id: 30
+              actions:
+                config:
+                  forward-action: "DROP"
+              ipv4:
+                config:
+                  source-address: "240.0.0.0/4"
+                  destination-address: "ANY"
+            - sequence-id: 40
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "168.254.0.0/16"
+                  destination-address: "any"
+            - sequence-id: 50
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "10.0.0.0/8"
+                  destination-address: "any"
+            - sequence-id: 60
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "100.64.0.0/10"
+                  destination-address: "any"
+            - sequence-id: 70
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "172.16.0.0/12"
+                  destination-address: "any"
+            - sequence-id: 80
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "192.0.0.0/24"
+                  destination-address: "any"
+            - sequence-id: 90
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "192.88.99.0/24"
+                  destination-address: "any"
+            - sequence-id: 100
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "192.168.0.0/16"
+                  destination-address: "any"
+            - sequence-id: 110
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "198.18.0.0/15"
+                  destination-address: "any"
+            - sequence-id: 120
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "192.0.2.0/24"
+                  destination-address: "any"
+            - sequence-id: 130
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "198.51.100.0/24"
+                  destination-address: "any"
+            - sequence-id: 140
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "203.0.113.0/24"
+                  destination-address: "any"
+            - sequence-id: 150
+              actions:
+                config:
+                  forward-action: DROP
+              ipv4:
+                config:
+                  source-address: "233.252.0.0/24"
+                  destination-address: "any"
+            - sequence-id: 160
+              actions:
+                config:
+                  forward-action: ACCEPT
+              ipv4:
+                config:
+                  source-address: "any"
+                  destination-address: "any"
